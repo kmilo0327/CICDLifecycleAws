@@ -1,1 +1,2 @@
-echo "before install"
+yum update -y
+yum install httpd -y
