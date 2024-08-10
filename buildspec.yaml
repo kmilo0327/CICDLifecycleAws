@@ -1,20 +1,11 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo "Instalando httpd"
-      - yum install -y httpd
-
   build:
     commands:
       - echo "Construyendo aplicación"
-      - echo "<html><body><h1>Ciclo CICD Completo</h1></body></html>" > /var/www/html/index.html
-
-  post_build:
-    commands:
-      - echo "Finalizando construccion"
+      - echo "<html><body><h1>Ciclo CICD Completo</h1></body></html>" > index.html
 
 artifacts:
   files:
-    - /var/www/html/index.html
+    - index.html
